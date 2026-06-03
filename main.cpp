@@ -5,7 +5,7 @@
 #include <Windows.h>
 
 int realStringHash(std::string str, int simpleNumP,int moduleN) {
-	uint64_t hash{}, power{1};//так как simpleNumP в нулевой степени дает 1
+	uint64_t hash{}, power{1};//С‚Р°Рє РєР°Рє simpleNumP РІ РЅСѓР»РµРІРѕР№ СЃС‚РµРїРµРЅРё РґР°РµС‚ 1
 	char symbol{};
 	for (char symbol : str) {
 		hash = (hash + static_cast<unsigned char>(symbol) * power) % moduleN;
@@ -19,14 +19,14 @@ int main() {
 	std::string str{};
 	int simpleNumP{}, moduleN{};
 
-	std::cout << "Введите p: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ p: ";
 	std::cin >> simpleNumP;
-	std::cout << "Введите n: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ n: ";
 	std::cin >> moduleN;
 	do {
-		std::cout << "Введите строку: ";
+		std::cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: ";
 		std::cin >> str;
-		std::cout << "Хэш строки " << str << " = " << realStringHash(str, simpleNumP, moduleN) << "\n";
+		std::cout << "РҐСЌС€ СЃС‚СЂРѕРєРё " << str << " = " << realStringHash(str, simpleNumP, moduleN) << "\n";
 	} while (str != "exit");
 	return 0;
 }
